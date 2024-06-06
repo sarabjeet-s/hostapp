@@ -61,10 +61,16 @@ module.exports = {
       remotes: {
         remoteapp: "remoteapp@http://localhost:8080/remoteEntry.js",
       },
-      // shared: ["react", "react-dom"],
       shared: {
         react: {
-          eager: false,
+          singleton: true,
+          eager: true,
+          requiredVersion: "^18.3.1",
+        },
+        "react-dom": {
+          singleton: true,
+          eager: true,
+          requiredVersion: "^18.3.1",
         },
       },
     }),

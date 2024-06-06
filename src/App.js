@@ -20,7 +20,7 @@ function App() {
         }}
       >
         {show && (
-          <React.Suspense fallback="Loading...">
+          <React.Suspense fallback="Loading..." error={""}>
             <RemoteButton />
           </React.Suspense>
         )}
